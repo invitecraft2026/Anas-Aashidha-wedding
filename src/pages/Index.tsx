@@ -10,6 +10,7 @@ import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
 import islamicPattern from "@/assets/islamic-pattern.png";
 import SpecialNote from "@/components/SpecialNote";
+import WeddingWishes from "@/components/WeddingWishes";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,7 @@ const Index = () => {
             <CountdownTimer />
             <EventDetails />
             <SpecialNote/>
+            <WeddingWishes/>
             <LocationSection />
             {/* <Gallery /> */}
 
