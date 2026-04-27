@@ -26,7 +26,7 @@ const SpecialNote = () => {
   </span>,
   our joy is beautifully doubled to have our
   <span className="text-secondary font-semibold">
-    {" "}Nikah
+    {" "}Nikah{" "}
   </span>
   solemnized in the blessed presence of
   <span className="text-primary font-bold">

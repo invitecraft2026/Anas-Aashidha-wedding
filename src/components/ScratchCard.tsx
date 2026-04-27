@@ -39,14 +39,14 @@ const ScratchCard = () => {
     ctx.fillRect(0, 0, rect.width, rect.height);
 
     // Scratch text
-    ctx.fillStyle = "#8a6e2f";
-    ctx.font = `bold 14px 'Playfair Display', serif`;
-    ctx.textAlign = "center";
-    ctx.fillText(
-      "✦ Hidden with love... reveal it ✦",
-      rect.width / 2,
-      rect.height / 2 - 10
-    );
+    // ctx.fillStyle = "#8a6e2f";
+    // ctx.font = `bold 14px 'Playfair Display', serif`;
+    // ctx.textAlign = "center";
+    // ctx.fillText(
+    //   "✦ Hidden with love... reveal it ✦",
+    //   rect.width / 2,
+    //   rect.height / 2 - 10
+    // );
 
     // ctx.font = `12px 'Lato', sans-serif`;
     // ctx.fillText(
