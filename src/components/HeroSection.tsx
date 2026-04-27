@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import coupleImage from "@/assets/couple.png";
+import coupleImage from "/couplephoto.png";
 import islamicPattern from "@/assets/islamic-pattern.png";
 
 const HeroSection = () => {
@@ -55,7 +55,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-muted-foreground tracking-[0.3em] uppercase text-xs md:text-sm mb-2 font-body"
       >
-        By His Divine Will
+        And we created you in pairs(78:8)
       </motion.p>
 
       <motion.div
@@ -80,7 +80,7 @@ const HeroSection = () => {
         </span>
         <br /> */}
         <span className="mt-2 inline-block">
-          We Are To Be Wed
+          By his divine will,We Are To Be Wed
         </span>
       </motion.p>
 
@@ -151,16 +151,16 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.8 }}
         className="section-divider mt-8"
-      />
+      /> */}
 
       {/* Bottom Quote */}
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -172,7 +172,7 @@ const HeroSection = () => {
         <span className="text-sm tracking-widest">
           — Surah An-Naba 78:8
         </span>
-      </motion.p>
+      </motion.p> */}
     </section>
   );
 };

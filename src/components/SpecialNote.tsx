@@ -2,31 +2,46 @@ import { motion } from "framer-motion";
 
 const SpecialNote = () => {
   return (
-    <section className="py-20 px-4 text-center">
+    <section className="py-24 px-4 text-center relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-2xl mx-auto"
+        className="max-w-3xl mx-auto"
       >
-        <div className="section-divider mb-8" />
+        {/* Top Divider */}
+        <div className="section-divider mb-10" />
 
-        <p className="text-muted-foreground tracking-[0.3em] uppercase text-xs mb-3 font-body">
+        {/* Title */}
+        <p className="text-secondary tracking-[0.4em] uppercase text-xs md:text-sm font-body mb-8 font-semibold">
           Special Note
         </p>
 
-        <p className="elegant-text text-lg md:text-xl text-primary-foreground leading-relaxed mb-4">
-          Blessed Nikah under the guidance of
-        </p>
+        {/* Beautiful Main Text */}
+       <p className="text-primary text-base md:text-xl leading-loose font-serif italic font-medium px-2 md:px-6">
+  As we unite our lives in the grace of
+  <span className="text-secondary font-semibold">
+    {" "}Allah (SWT)
+  </span>,
+  our joy is beautifully doubled to have our
+  <span className="text-secondary font-semibold">
+    {" "}Nikah
+  </span>
+  solemnized in the blessed presence of
+  <span className="text-primary font-bold">
+    {" "}Syed Muhammed Jamalullaili Thangal
+  </span>,
+  Grand Qazi of Calicut.
+</p>
 
-        <h3 className="display-text text-xl md:text-2xl text-primary mb-4">
-          Grand Qazi Syed Muhammed Jamalullaili Thangal
-        </h3>
-
-        <p className="elegant-text text-muted-foreground italic text-base md:text-lg">
-          In Sha Allah, a beautiful forever begins.
-        </p>
+        {/* Small Golden Accent */}
+        <div
+          className="w-20 h-0.5 mx-auto mt-10"
+          style={{
+            background: "var(--gradient-gold)",
+          }}
+        />
       </motion.div>
     </section>
   );

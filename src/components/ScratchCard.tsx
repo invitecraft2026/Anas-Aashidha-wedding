@@ -43,17 +43,17 @@ const ScratchCard = () => {
     ctx.font = `bold 14px 'Playfair Display', serif`;
     ctx.textAlign = "center";
     ctx.fillText(
-      "✦ Scratch to Reveal ✦",
+      "✦ Hidden with love... reveal it ✦",
       rect.width / 2,
       rect.height / 2 - 10
     );
 
-    ctx.font = `12px 'Lato', sans-serif`;
-    ctx.fillText(
-      "the Wedding Date",
-      rect.width / 2,
-      rect.height / 2 + 14
-    );
+    // ctx.font = `12px 'Lato', sans-serif`;
+    // ctx.fillText(
+    //   "the Wedding Date",
+    //   rect.width / 2,
+    //   rect.height / 2 + 14
+    // );
   }, []);
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const ScratchCard = () => {
                 May 17, 2026
               </h3>
 
-              <div
+              {/* <div
                 className="w-16 h-0.5 mx-auto my-3"
                 style={{ background: "var(--gradient-gold)" }}
               />
@@ -138,7 +138,7 @@ const ScratchCard = () => {
 
               <p className="elegant-text text-primary-foreground/80 mt-1">
                 Ajwa Convention Centre, Padapparamb
-              </p>
+              </p> */}
 
               {/* Add to Calendar Button */}
               {isRevealed && (

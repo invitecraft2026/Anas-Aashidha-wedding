@@ -35,30 +35,57 @@ const Index = () => {
             <EventDetails />
             <SpecialNote/>
             <LocationSection />
-            <Gallery />
+            {/* <Gallery /> */}
 
             {/* Footer */}
-            <footer className="py-16 px-4 text-center relative overflow-hidden">
-              <img
-                src={islamicPattern}
-                alt=""
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 opacity-10"
-              />
+           <footer className="py-20 px-4 text-center relative overflow-hidden">
+  <img
+    src={islamicPattern}
+    alt=""
+    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 opacity-10"
+  />
 
-              <div className="section-divider mb-8" />
+  <div className="section-divider mb-10" />
 
-              <p className="elegant-text text-muted-foreground text-lg italic mb-2">
-                We would be honored by your presence
-              </p>
+  {/* Elegant Ending Note */}
+  <div className="max-w-3xl mx-auto relative z-10">
+    <p className="text-secondary tracking-[0.35em] uppercase text-xs md:text-sm font-body mb-6">
+      A Final Note
+    </p>
 
-              <p className="display-text text-2xl md:text-3xl text-primary mb-4">
-                Anas & Anshidha
-              </p>
+    <p className="text-primary/90 text-lg md:text-xl leading-loose font-serif italic tracking-wide mb-8">
+  To our favorite souls,
+  <br />
+  A new chapter begins,
+  <br />
+  A shared prayer unfolds,
+  <br />
+  And our Nikah marks the start of forever.
+  <br />
+  <br />
+  Insha'Allah, as our two worlds unite, we look forward to being
+  surrounded by the faces that have always supported us,
+  loved us, and prayed for us.
+  <br />
+  Your presence is our joy,
+  <br />
+  and your prayers are our greatest blessing.
+</p>
 
-              <p className="text-muted-foreground text-xs tracking-widest uppercase font-body">
-                Sunday, May 17, 2026
-              </p>
-            </footer>
+    <div
+      className="w-20 h-0.5 mx-auto mb-6"
+      style={{ background: "var(--gradient-gold)" }}
+    />
+
+    <p className="elegant-text text-primary text-xl md:text-2xl italic mb-2">
+      With love
+    </p>
+
+    <h3 className="display-text text-3xl md:text-4xl text-primary">
+      Anas & Anshidha
+    </h3>
+  </div>
+</footer>
           </motion.div>
         </>
       )}

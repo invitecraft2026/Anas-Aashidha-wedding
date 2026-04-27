@@ -12,13 +12,14 @@ const events = [
   },
   {
     title: "Valima Reception",
-    icon: "🎉",
+    icon: "🏠",
     date: "Sunday, May 17, 2026",
     time: "4:00 PM",
     venue: "Groom House",
-    address: "Reception at Groom House",
+    address: "Puliyodan House, Omanoor",
   },
 ];
+
 
 const EventDetails = () => {
   return (
