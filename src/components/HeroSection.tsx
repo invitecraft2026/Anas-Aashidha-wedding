@@ -37,14 +37,15 @@ const HeroSection = () => {
         />
       ))}
 
+      {/* Top Bismillah */}
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="elegant-text text-secondary text-lg md:text-xl tracking-widest mb-4 text-center"
+        className="elegant-text text-secondary text-xl md:text-2xl tracking-widest mb-4 text-center"
       >
-        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+        ﷽
       </motion.p>
 
       <motion.p
@@ -54,7 +55,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-muted-foreground tracking-[0.3em] uppercase text-xs md:text-sm mb-2 font-body"
       >
-        We are getting married
+        By His Divine Will
       </motion.p>
 
       <motion.div
@@ -62,8 +63,26 @@ const HeroSection = () => {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="section-divider mb-8"
+        className="section-divider mb-6"
       />
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="elegant-text text-muted-foreground text-base md:text-lg italic text-center max-w-xl mb-8"
+      >
+        {/* “And We created you in pairs.”
+        <br />
+        <span className="text-sm tracking-widest">
+          (Surah An-Naba 78:8)
+        </span>
+        <br /> */}
+        <span className="mt-2 inline-block">
+          We Are To Be Wed
+        </span>
+      </motion.p>
 
       {/* Couple Image */}
       <motion.div
@@ -77,20 +96,26 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 -m-10 rounded-full"
           style={{
-            background: "radial-gradient(circle, hsl(43 80% 70% / 0.25) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, hsl(43 80% 70% / 0.25) 0%, transparent 70%)",
             animation: "glow-pulse 3s ease-in-out infinite",
           }}
         />
+
         <motion.img
           src={coupleImage}
           alt="Wedding couple"
           className="relative w-64 md:w-80 lg:w-96 drop-shadow-2xl"
           animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         />
       </motion.div>
 
-      {/* Names */}
+      {/* Names + Parents */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -98,9 +123,32 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="text-center"
       >
-        <h1 className="display-text text-5xl md:text-7xl text-primary mb-1">Ahmed</h1>
-        <span className="gold-text text-4xl md:text-5xl display-text italic inline-block my-2">&</span>
-        <h1 className="display-text text-5xl md:text-7xl text-primary">Fatima</h1>
+        {/* Groom */}
+        <h1 className="display-text text-5xl md:text-7xl text-primary mb-2">
+          Anas
+        </h1>
+
+        <p className="text-muted-foreground text-sm md:text-base mb-6 leading-relaxed">
+          S/O Mr. Ayyoob & Mrs. Nafeesa
+          <br />
+          Puliyodan House, Omanoor
+        </p>
+
+        {/* & */}
+        <span className="gold-text text-4xl md:text-5xl display-text italic inline-block my-2">
+          &
+        </span>
+
+        {/* Bride */}
+        <h1 className="display-text text-5xl md:text-7xl text-primary mt-2 mb-2">
+          Anshidha
+        </h1>
+
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+          D/O Mr. Ibrahim & Mrs. Rabiya
+          <br />
+          Kottapparambil House, Kolathur
+        </p>
       </motion.div>
 
       <motion.div
@@ -111,6 +159,7 @@ const HeroSection = () => {
         className="section-divider mt-8"
       />
 
+      {/* Bottom Quote */}
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -118,9 +167,11 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 1 }}
         className="elegant-text text-muted-foreground text-lg md:text-xl mt-6 italic max-w-lg text-center"
       >
-        "And He placed between you affection and mercy."
+        “And We created you in pairs.”
         <br />
-        <span className="text-sm tracking-widest">— Quran 30:21</span>
+        <span className="text-sm tracking-widest">
+          — Surah An-Naba 78:8
+        </span>
       </motion.p>
     </section>
   );

@@ -9,6 +9,7 @@ import LocationSection from "@/components/LocationSection";
 import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
 import islamicPattern from "@/assets/islamic-pattern.png";
+import SpecialNote from "@/components/SpecialNote";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,7 @@ const Index = () => {
             <ScratchCard />
             <CountdownTimer />
             <EventDetails />
+            <SpecialNote/>
             <LocationSection />
             <Gallery />
 
@@ -42,15 +44,19 @@ const Index = () => {
                 alt=""
                 className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 opacity-10"
               />
+
               <div className="section-divider mb-8" />
+
               <p className="elegant-text text-muted-foreground text-lg italic mb-2">
                 We would be honored by your presence
               </p>
+
               <p className="display-text text-2xl md:text-3xl text-primary mb-4">
-                Ahmed & Fatima
+                Anas & Anshidha
               </p>
+
               <p className="text-muted-foreground text-xs tracking-widest uppercase font-body">
-                December 25, 2026
+                Sunday, May 17, 2026
               </p>
             </footer>
           </motion.div>

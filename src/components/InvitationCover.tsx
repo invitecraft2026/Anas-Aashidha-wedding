@@ -72,7 +72,7 @@ const InvitationCover = ({ onOpen }: InvitationCoverProps) => {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="display-text text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-2"
         >
-          Ahmed
+          Anas
         </motion.h1>
 
         <motion.span
@@ -90,7 +90,7 @@ const InvitationCover = ({ onOpen }: InvitationCoverProps) => {
           transition={{ delay: 1.6, duration: 0.8 }}
           className="display-text text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-6"
         >
-          Fatima
+          Anshidha
         </motion.h1>
 
         <motion.div

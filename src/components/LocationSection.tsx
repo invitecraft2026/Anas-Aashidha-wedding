@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Navigation } from "lucide-react";
 
 const LocationSection = () => {
-  const venueLocation = "Grand+Emerald+Masjid,+City+Center";
+  const venueLocation = "Ajwa+Convention+Centre,+Padapparamb";
 
   return (
     <section className="py-20 px-4">
@@ -16,7 +16,11 @@ const LocationSection = () => {
         <p className="text-muted-foreground tracking-[0.3em] uppercase text-xs mb-2 font-body">
           Find Us
         </p>
-        <h2 className="display-text text-3xl md:text-4xl text-primary mb-2">Venue Location</h2>
+
+        <h2 className="display-text text-3xl md:text-4xl text-primary mb-2">
+          Venue Location
+        </h2>
+
         <div className="section-divider" />
       </motion.div>
 
@@ -30,7 +34,7 @@ const LocationSection = () => {
         <div className="glass-card gold-border overflow-hidden">
           <div className="aspect-video bg-muted relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019284378389!2d-122.41941548468204!3d37.77492977975892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjciTiAxMjLCsDI1JzAzLjkiVw!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps?q=Ajwa+Convention+Centre,+Padapparamb&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -41,14 +45,20 @@ const LocationSection = () => {
               className="absolute inset-0"
             />
           </div>
+
           <div className="p-6 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <MapPin className="w-5 h-5 text-secondary" />
-              <h3 className="display-text text-xl text-primary">Grand Emerald Masjid</h3>
+
+              <h3 className="display-text text-xl text-primary">
+                Ajwa Convention Centre
+              </h3>
             </div>
+
             <p className="text-muted-foreground text-sm font-body mb-4">
-              123 Blessing Avenue, City Center
+              Padapparamb
             </p>
+
             <a
               href={`https://www.google.com/maps/dir/?api=1&destination=${venueLocation}`}
               target="_blank"

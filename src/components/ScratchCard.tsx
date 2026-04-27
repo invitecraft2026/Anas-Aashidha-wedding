@@ -7,6 +7,15 @@ const ScratchCard = () => {
   const [isScratching, setIsScratching] = useState(false);
   const scratchPercentRef = useRef(0);
 
+  // Google Calendar Link
+  const googleCalendarLink =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=Anas+%26+Anshidha+Wedding" +
+    "&dates=20260517T110000/20260517T130000" +
+    "&details=Nikah+Ceremony+at+Ajwa+Convention+Centre,+Padapparamb" +
+    "&location=Ajwa+Convention+Centre,+Padapparamb" +
+    "&sf=true&output=xml";
+
   const initCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -25,16 +34,26 @@ const ScratchCard = () => {
     gradient.addColorStop(0.5, "#dbb84d");
     gradient.addColorStop(0.7, "#f0d78c");
     gradient.addColorStop(1, "#c9a84c");
+
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, rect.width, rect.height);
 
-    // Text on scratch cover
+    // Scratch text
     ctx.fillStyle = "#8a6e2f";
     ctx.font = `bold 14px 'Playfair Display', serif`;
     ctx.textAlign = "center";
-    ctx.fillText("✦ Scratch to Reveal ✦", rect.width / 2, rect.height / 2 - 10);
+    ctx.fillText(
+      "✦ Scratch to Reveal ✦",
+      rect.width / 2,
+      rect.height / 2 - 10
+    );
+
     ctx.font = `12px 'Lato', sans-serif`;
-    ctx.fillText("the Wedding Date", rect.width / 2, rect.height / 2 + 14);
+    ctx.fillText(
+      "the Wedding Date",
+      rect.width / 2,
+      rect.height / 2 + 14
+    );
   }, []);
 
   useEffect(() => {
@@ -44,6 +63,7 @@ const ScratchCard = () => {
   const scratch = (x: number, y: number) => {
     const canvas = canvasRef.current;
     if (!canvas || isRevealed) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -56,8 +76,9 @@ const ScratchCard = () => {
     ctx.arc(cx, cy, 22, 0, Math.PI * 2);
     ctx.fill();
 
-    // Check scratch percentage
+    // Scratch percentage
     scratchPercentRef.current += 0.5;
+
     if (scratchPercentRef.current > 40) {
       setIsRevealed(true);
     }
@@ -79,38 +100,70 @@ const ScratchCard = () => {
         <p className="text-muted-foreground tracking-[0.3em] uppercase text-xs mb-2 font-body">
           Interactive
         </p>
-        <h2 className="display-text text-3xl md:text-4xl text-primary mb-2">Save the Date</h2>
+
+        <h2 className="display-text text-3xl md:text-4xl text-primary mb-2">
+          Save the Date
+        </h2>
+
         <div className="section-divider mb-8" />
 
         <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden gold-border">
-          {/* Revealed content */}
+          {/* Revealed Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-primary p-6">
             <motion.div
               initial={false}
-              animate={isRevealed ? { opacity: 1, scale: 1 } : { opacity: 0.3, scale: 0.95 }}
+              animate={
+                isRevealed
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0.3, scale: 0.95 }
+              }
               className="text-center"
             >
               <p className="text-gold-light/70 tracking-widest uppercase text-xs mb-2 font-body">
                 Save the Date
               </p>
+
               <h3 className="display-text text-3xl md:text-4xl text-primary-foreground mb-1">
-                December 25, 2026
+                May 17, 2026
               </h3>
-              <div className="w-16 h-0.5 mx-auto my-3" style={{ background: "var(--gradient-gold)" }} />
+
+              <div
+                className="w-16 h-0.5 mx-auto my-3"
+                style={{ background: "var(--gradient-gold)" }}
+              />
+
               <p className="elegant-text text-gold-light text-lg">
-                Nikah at 2:00 PM
+                Nikah at 11:00 AM
               </p>
+
               <p className="elegant-text text-primary-foreground/80 mt-1">
-                Grand Emerald Banquet Hall
+                Ajwa Convention Centre, Padapparamb
               </p>
+
+              {/* Add to Calendar Button */}
+              {isRevealed && (
+                <motion.a
+                  href={googleCalendarLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="inline-block mt-6 px-6 py-3 rounded-full border-2 border-gold text-gold-light font-body tracking-wide text-sm hover:bg-gold/10 transition-all duration-300"
+                >
+                  Add to Calendar
+                </motion.a>
+              )}
             </motion.div>
           </div>
 
-          {/* Scratch canvas */}
+          {/* Scratch Canvas */}
           <canvas
             ref={canvasRef}
             className={`absolute inset-0 w-full h-full cursor-pointer transition-opacity duration-700 ${
-              isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"
+              isRevealed
+                ? "opacity-0 pointer-events-none"
+                : "opacity-100"
             }`}
             onMouseDown={() => setIsScratching(true)}
             onMouseUp={() => setIsScratching(false)}
