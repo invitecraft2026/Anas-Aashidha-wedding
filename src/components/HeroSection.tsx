@@ -147,7 +147,7 @@ const HeroSection = () => {
         <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
           D/O Mr. Ibrahim & Mrs. Rabiya
           <br />
-          Kottapparambil House, Kolathur
+          Kottaparambil House, Kolathur
         </p>
       </motion.div>
 
