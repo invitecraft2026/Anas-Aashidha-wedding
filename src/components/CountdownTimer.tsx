@@ -40,7 +40,7 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-16 px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,21 +48,23 @@ const CountdownTimer = () => {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <p className="text-muted-foreground tracking-[0.3em] uppercase text-xs mb-2 font-body">
+        {/* Top Text */}
+        <p className="text-muted-foreground tracking-[0.2em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 font-body">
           Counting Down To
         </p>
 
-        <h2 className="display-text text-3xl md:text-4xl text-primary mb-2">
+        <h2 className="display-text text-2xl sm:text-3xl md:text-4xl text-primary mb-2">
           Our Special Day
         </h2>
 
         <div className="section-divider mb-4" />
 
-        <p className="text-muted-foreground text-sm md:text-base mb-10">
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base mb-8 px-2">
           Sunday, May 17, 2026 • 11:00 AM
         </p>
 
-        <div className="flex justify-center gap-3 md:gap-6 max-w-lg mx-auto">
+        {/* Countdown Boxes */}
+        <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-6 max-w-md md:max-w-lg mx-auto">
           {units.map((unit, i) => (
             <motion.div
               key={unit.label}
@@ -73,18 +75,18 @@ const CountdownTimer = () => {
                 delay: i * 0.1,
                 duration: 0.5,
               }}
-              className="glass-card p-4 md:p-6 flex-1 gold-border"
+              className="glass-card p-2 sm:p-3 md:p-6 gold-border rounded-xl"
             >
               <motion.span
                 key={unit.value}
                 initial={{ scale: 1.2, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="display-text text-3xl md:text-5xl text-primary block"
+                className="display-text text-lg sm:text-2xl md:text-5xl text-primary block"
               >
                 {String(unit.value).padStart(2, "0")}
               </motion.span>
 
-              <span className="text-muted-foreground text-xs md:text-sm uppercase tracking-widest font-body mt-1 block">
+              <span className="text-muted-foreground text-[9px] sm:text-[10px] md:text-sm uppercase tracking-wide md:tracking-widest font-body mt-1 block">
                 {unit.label}
               </span>
             </motion.div>

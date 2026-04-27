@@ -53,9 +53,9 @@ const HeroSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-muted-foreground tracking-[0.3em] uppercase text-xs md:text-sm mb-2 font-body"
+        className="text-muted-foreground text-[10px] sm:text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2 font-body text-center px-4 leading-relaxed"
       >
-        And we created you in pairs(78:8)
+        And we created you in pairs (78:8)
       </motion.p>
 
       <motion.div
