@@ -6,7 +6,7 @@ const WeddingWishes = () => {
   const [guestName, setGuestName] = useState("");
   const [message, setMessage] = useState("");
 
-  const whatsappNumber = "7909293403";
+  const whatsappNumber = "9747457461";
 
   const handleSendWish = () => {
     const text = `Hi, I am ${guestName || "Your Guest"} 💌
