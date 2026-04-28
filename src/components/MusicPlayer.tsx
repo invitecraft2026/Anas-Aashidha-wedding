@@ -13,10 +13,10 @@ const MusicPlayer = ({ autoPlay = false }: MusicPlayerProps) => {
   useEffect(() => {
     // Use a royalty-free nasheed-style ambient audio
     audioRef.current = new Audio(
-      "new wedding nasheed.mpeg"
+      "humming.mpeg"
     );
     audioRef.current.loop = true;
-    audioRef.current.volume = 0.2;
+    audioRef.current.volume = 0.4;
 
     return () => {
       if (audioRef.current) {
